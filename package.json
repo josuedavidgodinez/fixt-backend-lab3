@@ -1,0 +1,20 @@
+{
+  "name": "fix-it-backend-lab3",
+  "version": "1.0.0",
+  "description": "laboratorio 3 backend",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/josuedavidgodinez/fixt-backend-lab3.git"
+  },
+  "author": "David Godinez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/josuedavidgodinez/fixt-backend-lab3/issues"
+  },
+  "homepage": "https://github.com/josuedavidgodinez/fixt-backend-lab3#readme"
+}
