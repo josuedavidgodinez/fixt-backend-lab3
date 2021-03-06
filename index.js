@@ -27,20 +27,17 @@ const BuscarIndiceFinal = (arreglo, caracter) => {
 const VerificarSignos = (texto) =>{
 
   for( let i = 0; i <texto.length; i++){
-    caracter = texto.charAt(i);    
-    switch(caracter){
-        case '[':
-        case '{':
-        case '(':            
-            const ObjetoSigno = {openchar: caracter, closed: false, type: caracter === '{' ? "ll" : caracter === '[' ? "c":"p", index : i};
-            ObjetosCaracteres.push(ObjetoSigno);
-            break;
-        case ']':
-        case ')':
-        case '}':
-            const index = BuscarIndiceFinal(ObjetosCaracteres, caracter);
-            ObjetosCaracteres[index].closed = true;
-    }
+    caracter = texto.charAt(i);   
+     
+    if(caracter=='[' || caracter=='{' || caracter=='('){
+      const ObjetoSigno = {openchar: caracter, closed: false, type: caracter === '{' ? "ll" : caracter === '[' ? "c":"p", index : i};
+      ObjetosCaracteres.push(ObjetoSigno);0
+    }else if(caracter==']' || caracter=='}' || caracter==')'){
+      const index = BuscarIndiceFinal(ObjetosCaracteres, caracter);
+      ObjetosCaracteres[index].closed = true;
+    }      
+           
+    
   }
 
 let conteo=0
